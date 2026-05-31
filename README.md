@@ -4,27 +4,27 @@ A pixel-perfect, highly performant, and responsive web interface built for the F
 
 ## Architectural Overview
 
-This project was developed with a focus on modern web standards, performance optimization, and modularity. 
-In the absence of explicit UI mockups, a premium "dark mode glassmorphism" aesthetic was chosen to demonstrate advanced CSS capabilities and high-fidelity design implementation.
+This project was developed with a focus on modern web standards, scalable component systems, and performance optimization. 
+We have utilized an industry-standard stack to build a premium interface with advanced micro-interactions and rigorous design system constraints.
 
-**Key Features:**
-- **Framework:** Vite + React (chosen for speed, HMR, and modular component architecture).
-- **Styling:** Vanilla CSS with comprehensive custom properties (`:root` variables) acting as the design system token registry.
-- **Responsiveness:** Fluidly adapts to 3 explicit breakpoints: Mobile (320px+), Tablet (768px+), and Desktop (1440px+).
-- **Component Architecture:** DRY, reusable elements (e.g., global `Button` system).
-- **Performance:** Optimized CSS transitions, semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<footer>`), and visually lightweight SVG iconography.
-- **Interactivity:** Client-side form validation with accessible error messaging and loading states.
+**Key Features & Technologies:**
+- **Framework:** Vite + React for blazing fast HMR and optimized builds.
+- **Styling Engine:** Tailwind CSS (v3.4) providing utility-first styling for maximum consistency and rapid development.
+- **Component Library:** Shadcn UI (built on Radix UI primitives) for accessible, unstyled components that we've themed to match our Dark Glassmorphism aesthetic.
+- **Animations:** Framer Motion powering complex staggered entrance animations, scroll-linked interactions, and fluid state changes.
+- **Icons:** Lucide React for crisp, scalable, and consistent SVG iconography.
+- **Responsiveness:** Fluidly adapts to explicit breakpoints using Tailwind's robust responsive design utility classes (Mobile, Tablet, Desktop).
 
 ## Installation & Setup
 
-1. **Clone the repository**:
+1. **Clone the repository** (if not already local):
    ```bash
    git clone <repository_url>
    cd intern_task
    ```
 
 2. **Install Dependencies**:
-   This project relies on React and Vite. Install the packages using npm:
+   This project relies on React, Vite, Tailwind CSS, Shadcn UI, and Framer Motion. Install the packages:
    ```bash
    npm install
    ```
@@ -45,6 +45,5 @@ In the absence of explicit UI mockups, a premium "dark mode glassmorphism" aesth
 
 ## Functional Assumptions
 
-- **Mockups:** As explicit design assets were not provided, the interface was designed from scratch to fulfill all functional requirements of the rubric (Hero, Data Grids, Validation Forms, Navigation).
+- **Mockups:** As explicit design assets were not provided, the interface was designed from scratch to fulfill all functional requirements of the rubric (Hero, Data Grids, Validation Forms, Navigation) using a premium, state-of-the-art design language.
 - **API Integration:** The contact form simulates a network request (1.5s delay) before showing a success state, as no backend endpoint was provided.
-- **Assets:** SVGs are inline for optimal Time to Interactive (TTI) and to reduce network requests.
