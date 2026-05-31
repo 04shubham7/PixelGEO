@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# GEO / AEO Optimization: Explicitly welcoming Generative AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
