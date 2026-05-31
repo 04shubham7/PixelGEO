@@ -3,6 +3,7 @@ import Header from './layouts/Header/Header';
 import Hero from './components/Hero/Hero';
 import Features from './components/Features/Features';
 import ContactForm from './components/ContactForm/ContactForm';
+import Footer from './layouts/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Features />
         <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 }

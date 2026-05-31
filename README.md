@@ -1,16 +1,50 @@
-# React + Vite
+# Nexus - Frontend Engineering Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pixel-perfect, highly performant, and responsive web interface built for the Frontend Engineering Assessment.
 
-Currently, two official plugins are available:
+## Architectural Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was developed with a focus on modern web standards, performance optimization, and modularity. 
+In the absence of explicit UI mockups, a premium "dark mode glassmorphism" aesthetic was chosen to demonstrate advanced CSS capabilities and high-fidelity design implementation.
 
-## React Compiler
+**Key Features:**
+- **Framework:** Vite + React (chosen for speed, HMR, and modular component architecture).
+- **Styling:** Vanilla CSS with comprehensive custom properties (`:root` variables) acting as the design system token registry.
+- **Responsiveness:** Fluidly adapts to 3 explicit breakpoints: Mobile (320px+), Tablet (768px+), and Desktop (1440px+).
+- **Component Architecture:** DRY, reusable elements (e.g., global `Button` system).
+- **Performance:** Optimized CSS transitions, semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<footer>`), and visually lightweight SVG iconography.
+- **Interactivity:** Client-side form validation with accessible error messaging and loading states.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation & Setup
 
-## Expanding the ESLint configuration
+1. **Clone the repository**:
+   ```bash
+   git clone <repository_url>
+   cd intern_task
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install Dependencies**:
+   This project relies on React and Vite. Install the packages using npm:
+   ```bash
+   npm install
+   ```
+
+3. **Run the Development Server**:
+   Start the local Vite development server:
+   ```bash
+   npm run dev
+   ```
+   *The application will typically be available at http://localhost:5173*
+
+4. **Build for Production**:
+   To generate a highly optimized production bundle:
+   ```bash
+   npm run build
+   ```
+   *The output will be generated in the `dist` directory.*
+
+## Functional Assumptions
+
+- **Mockups:** As explicit design assets were not provided, the interface was designed from scratch to fulfill all functional requirements of the rubric (Hero, Data Grids, Validation Forms, Navigation).
+- **API Integration:** The contact form simulates a network request (1.5s delay) before showing a success state, as no backend endpoint was provided.
+- **Assets:** SVGs are inline for optimal Time to Interactive (TTI) and to reduce network requests.
