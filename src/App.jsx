@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from './layouts/Header/Header';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
     <div className="app">
       <Header />
       <main>
-        {/* We will add Hero, Cards, Forms here */}
+        <Hero />
       </main>
     </div>
   );
