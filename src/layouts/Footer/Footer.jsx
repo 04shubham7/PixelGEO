@@ -1,59 +1,60 @@
 import React from 'react';
-import './Footer.css';
+import { Sparkles, Twitter, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-brand">
-            <div className="footer-logo">
-              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="16" fill="var(--accent-primary)"/>
-                <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+    <footer className="bg-slate-900/80 border-t border-white/10 py-16 mt-16">
+      <div className="container mx-auto px-6 max-w-[1440px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-3 font-bold text-xl text-white mb-4">
+              <div className="bg-blue-500 rounded-full p-1.5">
+                <Sparkles className="w-5 h-5 text-white" />
+              </div>
               <span>Nexus</span>
             </div>
-            <p>Empowering the next generation of frontend engineering with robust, scalable primitives.</p>
+            <p className="text-slate-400 text-sm max-w-sm">
+              Empowering the next generation of frontend engineering with robust, scalable primitives.
+            </p>
           </div>
           
-          <div className="footer-links">
-            <h4>Product</h4>
-            <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#analytics">Analytics</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#changelog">Changelog</a></li>
+          <div>
+            <h4 className="text-white font-semibold mb-4">Product</h4>
+            <ul className="flex flex-col gap-3">
+              <li><a href="#features" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Features</a></li>
+              <li><a href="#analytics" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Analytics</a></li>
+              <li><a href="#pricing" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Pricing</a></li>
+              <li><a href="#changelog" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Changelog</a></li>
             </ul>
           </div>
           
-          <div className="footer-links">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="#docs">Documentation</a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#community">Community</a></li>
-              <li><a href="#help">Help Center</a></li>
+          <div>
+            <h4 className="text-white font-semibold mb-4">Resources</h4>
+            <ul className="flex flex-col gap-3">
+              <li><a href="#docs" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Documentation</a></li>
+              <li><a href="#blog" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Blog</a></li>
+              <li><a href="#community" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Community</a></li>
+              <li><a href="#help" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Help Center</a></li>
             </ul>
           </div>
           
-          <div className="footer-links">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
+          <div>
+            <h4 className="text-white font-semibold mb-4">Legal</h4>
+            <ul className="flex flex-col gap-3">
+              <li><a href="#privacy" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Privacy Policy</a></li>
+              <li><a href="#terms" className="text-slate-400 hover:text-blue-400 transition-colors text-sm">Terms of Service</a></li>
             </ul>
           </div>
         </div>
         
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Nexus Inc. All rights reserved.</p>
-          <div className="social-links">
-            <a href="#twitter" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-6">
+          <p className="text-slate-400 text-sm">&copy; {new Date().getFullYear()} Nexus Inc. All rights reserved.</p>
+          <div className="flex gap-4">
+            <a href="#twitter" className="text-slate-400 hover:text-white transition-colors">
+              <Twitter className="w-5 h-5" />
             </a>
-            <a href="#github" aria-label="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <a href="#github" className="text-slate-400 hover:text-white transition-colors">
+              <Github className="w-5 h-5" />
             </a>
           </div>
         </div>
