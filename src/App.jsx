@@ -1,12 +1,13 @@
 import React from 'react';
+import Header from './layouts/Header/Header';
 
 function App() {
   return (
     <div className="app">
-      <header className="container section-padding">
-        <h1>Frontend Assessment</h1>
-        <p>Premium UI implementation with Vite + React.</p>
-      </header>
+      <Header />
+      <main>
+        {/* We will add Hero, Cards, Forms here */}
+      </main>
     </div>
   );
 }
