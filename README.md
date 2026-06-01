@@ -23,6 +23,7 @@ We have utilized an industry-standard stack to build a premium interface with ad
    cd intern_task
    ```
 
+
 2. **Install Dependencies**:
    This project relies on React, Vite, Tailwind CSS, Shadcn UI, and Framer Motion. Install the packages:
    ```bash
