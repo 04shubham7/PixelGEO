@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10 bg-slate-900/50">
+    <section id="contact" className="py-24 relative z-10 bg-muted/30">
       <div className="container mx-auto px-6 max-w-[1440px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
@@ -50,24 +50,26 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Let's build the future together.</h2>
-            <p className="text-slate-400 text-lg mb-8 max-w-md">
-              Have a project in mind or want to learn more about our frontend primitives? Reach out to our engineering team.
+            <img src="/contact_interior.png" alt="Premium Modern Interior" className="w-full h-64 object-cover rounded-2xl mb-8 shadow-lg" />
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Find your dream property today.</h2>
+            <p className="text-muted-foreground text-lg mb-8 max-w-md">
+              Have a specific property requirement in mind? Reach out to our real estate experts. We'll connect you with top verified brokers.
             </p>
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 font-semibold border border-blue-500/20">01</div>
+                <div className="w-12 h-12 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 font-semibold border border-brand-500/20">01</div>
                 <div>
-                  <h4 className="text-white font-medium">Architecture Review</h4>
-                  <p className="text-slate-400 text-sm">Free consultation on your current stack.</p>
+                  <h4 className="text-foreground font-medium">Free Consultation</h4>
+                  <p className="text-muted-foreground text-sm">Discuss your property needs with our experts.</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 font-semibold border border-blue-500/20">02</div>
+                <div className="w-12 h-12 rounded-full bg-brand-500/10 flex items-center justify-center text-brand-500 font-semibold border border-brand-500/20">02</div>
                 <div>
-                  <h4 className="text-white font-medium">Custom Integration</h4>
-                  <p className="text-slate-400 text-sm">Tailored primitives for your unique needs.</p>
+                  <h4 className="text-foreground font-medium">Broker Matchmaking</h4>
+                  <p className="text-muted-foreground text-sm">Get introduced to verified, top-rated brokers.</p>
                 </div>
               </div>
             </div>
@@ -79,10 +81,10 @@ const ContactForm = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Card className="bg-slate-900/80 backdrop-blur-xl border-white/10 p-2 shadow-2xl">
+            <Card className="glass-panel p-2 shadow-2xl">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Contact Us</CardTitle>
-                <CardDescription className="text-slate-400">We generally respond within 24 hours.</CardDescription>
+                <CardTitle className="text-2xl text-foreground">Contact Us</CardTitle>
+                <CardDescription className="text-muted-foreground">We generally respond within 24 hours.</CardDescription>
               </CardHeader>
               <CardContent>
                 {status === 'success' ? (
@@ -92,11 +94,11 @@ const ContactForm = () => {
                     className="flex flex-col items-center justify-center py-12 text-center"
                   >
                     <CheckCircle2 className="w-16 h-16 text-emerald-500 mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                    <p className="text-slate-400">Thank you for reaching out. We'll be in touch soon.</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">Message Sent!</h3>
+                    <p className="text-muted-foreground">Thank you for reaching out. We'll be in touch soon.</p>
                     <Button 
                       variant="outline" 
-                      className="mt-8 border-white/20 text-white hover:bg-white/10"
+                      className="mt-8 border-border text-foreground hover:bg-muted"
                       onClick={() => setStatus('idle')}
                     >
                       Send Another Message
@@ -105,45 +107,45 @@ const ContactForm = () => {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
-                      <Label htmlFor="name" className="text-slate-300">Full Name</Label>
+                      <Label htmlFor="name" className="text-muted-foreground">Full Name</Label>
                       <Input 
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
-                        className={`bg-slate-950/50 border-white/10 text-white focus-visible:ring-blue-500 ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                        className={`bg-background border-border text-foreground focus-visible:ring-brand-500 ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                         placeholder="John Doe"
                       />
-                      {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+                      {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="email" className="text-slate-300">Email Address</Label>
+                      <Label htmlFor="email" className="text-muted-foreground">Email Address</Label>
                       <Input 
                         id="email"
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        className={`bg-slate-950/50 border-white/10 text-white focus-visible:ring-blue-500 ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                        className={`bg-background border-border text-foreground focus-visible:ring-brand-500 ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                         placeholder="john@example.com"
                       />
-                      {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+                      {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message" className="text-slate-300">Message</Label>
+                      <Label htmlFor="message" className="text-muted-foreground">Property Requirements</Label>
                       <Textarea 
                         id="message"
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
-                        className={`bg-slate-950/50 border-white/10 text-white focus-visible:ring-blue-500 min-h-[120px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                        placeholder="How can we help you?"
+                        className={`bg-background border-border text-foreground focus-visible:ring-brand-500 min-h-[120px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
+                        placeholder="What kind of property are you looking for?"
                       />
-                      {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
+                      {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                     </div>
                     
                     <Button 
                       type="submit" 
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                      className="w-full bg-brand-500 hover:bg-brand-600 text-white"
                       disabled={status === 'submitting'}
                     >
                       {status === 'submitting' ? (

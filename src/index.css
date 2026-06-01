@@ -4,6 +4,43 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 24.6 100% 50%; /* Brand Orange #FF7A18 approx */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 24.6 100% 50%;
+
+    --radius: 0.5rem;
+    
+    --brand-50: 30 100% 97%;
+    --brand-100: 30 100% 93%;
+    --brand-500: 25 100% 55%; /* #FF7A18 */
+    --brand-600: 25 100% 45%;
+  }
+
+  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -13,8 +50,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 24.6 100% 50%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -30,9 +67,12 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-
-    --radius: 0.5rem;
+    --ring: 24.6 100% 50%;
+    
+    --brand-50: 30 100% 97%;
+    --brand-100: 30 100% 93%;
+    --brand-500: 25 100% 55%;
+    --brand-600: 25 100% 45%;
   }
 }
 
@@ -41,7 +81,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -54,8 +94,9 @@ body::before {
   left: -10%;
   width: 50%;
   height: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle, hsl(var(--brand-500) / 0.1) 0%, transparent 60%);
   z-index: -1;
+  transition: background 0.3s ease;
 }
 
 body::after {
@@ -65,11 +106,12 @@ body::after {
   right: -10%;
   width: 50%;
   height: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+  background: radial-gradient(circle, hsl(var(--brand-600) / 0.05) 0%, transparent 60%);
   z-index: -1;
+  transition: background 0.3s ease;
 }
 
 /* Utility for glass panels */
 .glass-panel {
-  @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg;
+  @apply bg-background/60 backdrop-blur-xl border border-border rounded-2xl shadow-lg transition-colors duration-300;
 }
